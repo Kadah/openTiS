@@ -12,13 +12,14 @@ For now most of the code is stored in SL only, but the code should be open sourc
 
 
 # to do
-* Spawner system
-* Mission transponder
-* Mission status progress on HUD
+* Spawner system (SpawnHUB? How to get party members? How to drop monsters? Cubes? Notecards? Debug)
+* Mission transponder (How to manage entire level from one game?)
+* Mission status progress on HUD (How to make it non-obtrusive?)
 * Monster scene scripts (json? notecards? how to inject?)
-* NPC interaction system
-* Try (and fail) at making a humanoid
-* Automatic difficulty adjuster
-* Design Website
+* NPC interaction system (NPC portraits? Dialog options?)
+* Try (and fail) at making a humanoid (I was thinking a minotaur?)
+* Automatic difficulty adjuster (Killing monster makes it harder, getting knocked down makes it easier, make it per player or per party?)
+* Design Website (Bweee color choices!)
 * Allow guns to be purchased
-* Augments
+* Augments (Sets? Minor/Major augs?)
+* Weapon attachments?
