@@ -9,3 +9,16 @@ How to install:
 5. Put this project files there
 
 For now most of the code is stored in SL only, but the code should be open source. Except for st COM
+
+
+# to do
+* Spawner system
+* Mission transponder
+* Mission status progress on HUD
+* Monster scene scripts (json? notecards? how to inject?)
+* NPC interaction system
+* Try (and fail) at making a humanoid
+* Automatic difficulty adjuster
+* Design Website
+* Allow guns to be purchased
+* Augments
