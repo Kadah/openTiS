@@ -16,6 +16,10 @@
 #include "ots/classes/st RapeHandler.lsl"
 #include "ots/classes/st RapeTest.lsl"
 #include "ots/classes/st FXCompiler.lsl"
+#include "ots/classes/st SpawnHub.lsl"
+#include "ots/classes/st Level.lsl"
+#include "ots/classes/st LevelCfg.lsl"
+#include "ots/classes/st SpawnHubDispenser.lsl"
 
 
 
@@ -32,8 +36,11 @@
 #include "xobj_toonie/classes/cl MeshAnim.lsl"
 
 
+
 #define CRIT_TIME 2.5
 
+
+#define Party$FRIENDLY_FIRE 1
 
 
 #define PENIS 1
