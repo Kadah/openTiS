@@ -19,7 +19,7 @@
 #include "ots/classes/st SpawnHub.lsl"
 #include "ots/classes/st Level.lsl"
 #include "ots/classes/st LevelCfg.lsl"
-#include "ots/classes/st SpawnHubDispenser.lsl"
+#include "ots/classes/st MonsterScript.lsl"
 
 
 
@@ -39,6 +39,7 @@
 
 #define CRIT_TIME 2.5
 
+#define MONSTERSCRIPT_CHAN playerChan(llGetOwner())+4
 
 #define Party$FRIENDLY_FIRE 1
 

@@ -3,11 +3,17 @@
 #define MonsterMethod$hide 3		// Hides the monster - Usually used after rape starts
 #define MonsterMethod$rapeStarted 4	// [(key)rapist] - Sent omni on rape start to let non raping monsters drop aggro
 #define MonsterMethod$toggleFlags 5	// [(int)set, (int)remove] - set will be ORed, remove will be and NOT ed
+#define MonsterMethod$runtimeReady 6// null - Monster runtime scripts either timed out or finished parsing, unset that flag
+#define MonsterMethod$getScript 7	// (str)script - Fetches a script from spawnhub
+#define MonsterMethod$getParty 8	// NULL  - Returns a list of party members
 
 #define Monster$ini(mkey, players, flags, settings) runMethod(mkey, "st Monster", MonsterMethod$ini, [mkarr(PLAYERS), flags, settings], TNN)
 #define Monster$endRape(monster) runMethod(monster, "st Monster", MonsterMethod$endRape, [], TNN)
 #define Monster$hide(monster) runMethod(monster, "st Monster", MonsterMethod$hide, [], TNN)
 #define Monster$toggleFlags(set, unset) runMethod((string)LINK_THIS, "st Monster", MonsterMethod$toggleFlags, [set, unset], TNN)
+#define Monster$runtimeReady() runMethod((string)LINK_THIS, "st Monster", MonsterMethod$runtimeReady, [], TNN)
+#define Monster$getScript(script) runMethod((string)LINK_THIS, "st Monster", MonsterMethod$getScript, [script], TNN)
+#define Monster$getParty() runMethod((string)LINK_THIS, "st Monster", MonsterMethod$getParty, [], "", "", "party", "")
 
 
 // Settings = [aggrorange, speed]
