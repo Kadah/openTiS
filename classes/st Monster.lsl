@@ -23,6 +23,7 @@
 #define MonsterEvt$attack 3				// (key)target
 #define MonsterEvt$rapeStart 4			// (key)target
 #define MonsterEvt$rapeEnd 5			// (key)target
+#define MonsterEvt$players 6			// (arr)players
 
 #define Monster$RF_IMMOBILE 1
 #define Monster$RF_PACIFIED 2

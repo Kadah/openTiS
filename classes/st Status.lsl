@@ -8,7 +8,7 @@
 #define StatusMethod$setArmor 7			// (float)percentage
 #define StatusMethod$dropAggro 8		// NPC only - [(key)player]
 #define StatusMethod$noise 9			// NPC - [(float)aggro_range_multiplier, (key)agent] - Cause noise that might make monsters aggro - agent defaults to the sender owner
-
+#define StatusMethod$runtimeReady 10	// 
 
 #define Status$FLAG_SWIMMING 0x1
 #define Status$FLAG_CLIMBING 0x2
@@ -27,6 +27,7 @@
 #define StatusEvt$TAKEHIT 4			// [attacker, damage, flags, aggro_mod] - Only implemented in monster status
 #define StatusEvt$lostTarget 5			// NPC - [(key)target] - No aggro remain
 #define StatusEvt$gotTarget 6			// NPC - [(key)target] - Aggro changed to player
+#define StatusEvt$HP_CHANGED 7			// NPC - [(float)current_perc, (float)pre_perc]
 
 #define getStatus() (integer)db2$get("st Status", [StatusShared$FLAGS])
 
@@ -39,4 +40,5 @@
 #define Status$get(target, cb) runMethod(target, "st Status", StatusMethod$get, [], TARG_NULL, cb, "")
 #define Status$setArmor(perc) runMethod((string)LINK_ROOT, "st Status", StatusMethod$setArmor, [perc], TNN)
 #define Status$dropAggro(player) runMethod((string)LINK_ROOT, "st Status", StatusMethod$dropAggro, [player], TNN)
+#define Status$runtimeReady() runMethod((string)LINK_ROOT, "st Status", StatusMethod$runtimeReady, [], TNN)
 
