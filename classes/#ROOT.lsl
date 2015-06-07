@@ -14,5 +14,5 @@
 
 #define Root$statusControls(conts) runMethod((string)LINK_ROOT, "#ROOT", RootMethod$statusControls, [conts], TNN)
 #define Root$setSoundcloud(id) runMethod((string)LINK_ROOT, "#ROOT", RootMethod$setSoundcloud, [id], TNN)
-#define Root$getParty() runMethod((string)llGetOwner(), "#ROOT", RootMethod$getParty, [], "", "", "party", "")
+#define Root$getParty() runMethod((string)llGetOwner(), "#ROOT", RootMethod$getParty, [], "party")
 #define Root$attached() runMethod(llGetOwner(), "#ROOT", RootMethod$attached, [], TNN)

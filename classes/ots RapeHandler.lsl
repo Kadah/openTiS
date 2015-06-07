@@ -11,8 +11,8 @@
 
 
 
-#define RapeHandler$start(targ, pos, rot, atc, dur, flags) runMethod((string)targ, "st RapeHandler", RapeHandlerMethod$start, [pos, rot, mkarr(atc), dur, flags], "", "", cls$name, "")
-#define RapeHandler$forceStop(override) runMethod((string)LINK_SET, "st RapeHandler", RapeHandlerMethod$forceStop, [override], TNN)
-#define RapeHandler$animStart() runMethod(llGetOwner(), "st RapeHandler", RapeHandlerMethod$animStart, [], TNN)
+#define RapeHandler$start(targ, pos, rot, atc, dur, flags) runMethod((string)targ, "ots RapeHandler", RapeHandlerMethod$start, [pos, rot, mkarr(atc), dur, flags], TNN)
+#define RapeHandler$forceStop(override) runMethod((string)LINK_SET, "ots RapeHandler", RapeHandlerMethod$forceStop, [override], TNN)
+#define RapeHandler$animStart() runMethod(llGetOwner(), "ots RapeHandler", RapeHandlerMethod$animStart, [], TNN)
 
 

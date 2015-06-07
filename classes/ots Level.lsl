@@ -4,7 +4,7 @@
 #define LevelMethod$getParty 3					// returns a list of players in the level
 
 
-#define Level$getParty() runOmniMethod("st Level", LevelMethod$getParty, [], "", "", "party", "")
+#define Level$getParty() runOmniMethod("ots Level", LevelMethod$getParty, [], "party")
 
 
 

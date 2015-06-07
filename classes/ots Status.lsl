@@ -29,16 +29,16 @@
 #define StatusEvt$gotTarget 6			// NPC - [(key)target] - Aggro changed to player
 #define StatusEvt$HP_CHANGED 7			// NPC - [(float)current_perc, (float)pre_perc]
 
-#define getStatus() (integer)db2$get("st Status", [StatusShared$FLAGS])
+#define getStatus() (integer)db2$get("ots Status", [StatusShared$FLAGS])
 
 
-#define Status$setFlag(flags) runMethod((string)LINK_ROOT, "st Status", StatusMethod$setFlag, [flags], TNN)
-#define Status$remFlag(flags) runMethod((string)LINK_ROOT, "st Status", StatusMethod$remFlag, [flags], TNN)
-#define Status$addHP(val) runMethod((string)LINK_ROOT, "st Status", StatusMethod$addHP, [val], TNN)
-#define Status$addArmor(val) runMethod((string)LINK_ROOT, "st Status", StatusMethod$addArmor, [val], TNN)
-#define Status$addResource(perc) runMethod((string)LINK_ROOT, "st Status", StatusMethod$addResource, [perc], TNN)
-#define Status$get(target, cb) runMethod(target, "st Status", StatusMethod$get, [], TARG_NULL, cb, "")
-#define Status$setArmor(perc) runMethod((string)LINK_ROOT, "st Status", StatusMethod$setArmor, [perc], TNN)
-#define Status$dropAggro(player) runMethod((string)LINK_ROOT, "st Status", StatusMethod$dropAggro, [player], TNN)
-#define Status$runtimeReady() runMethod((string)LINK_ROOT, "st Status", StatusMethod$runtimeReady, [], TNN)
+#define Status$setFlag(flags) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$setFlag, [flags], TNN)
+#define Status$remFlag(flags) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$remFlag, [flags], TNN)
+#define Status$addHP(val) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$addHP, [val], TNN)
+#define Status$addArmor(val) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$addArmor, [val], TNN)
+#define Status$addResource(perc) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$addResource, [perc], TNN)
+#define Status$get(target, cb) runMethod(target, "ots Status", StatusMethod$get, [], cb)
+#define Status$setArmor(perc) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$setArmor, [perc], TNN)
+#define Status$dropAggro(player) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$dropAggro, [player], TNN)
+#define Status$runtimeReady() runMethod((string)LINK_ROOT, "ots Status", StatusMethod$runtimeReady, [], TNN)
 

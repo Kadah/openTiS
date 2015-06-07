@@ -4,37 +4,35 @@
 #include "ots/_lib_hot_tasks.lsl"
 #include "ots/_lib_effects.lsl"
 
-#include "ots/classes/st GUI.lsl"
+#include "ots/classes/ots GUI.lsl"
 #include "ots/classes/#ROOT.lsl"
-#include "ots/classes/st Status.lsl"
-#include "ots/classes/st COM.lsl"
-#include "ots/classes/st Rape.lsl"
-#include "ots/classes/st Monster.lsl"
-#include "ots/classes/st Combat.lsl"
-#include "ots/classes/st Gun.lsl"
-#include "ots/classes/st NpcConf.lsl"
-#include "ots/classes/st RapeHandler.lsl"
-#include "ots/classes/st RapeTest.lsl"
-#include "ots/classes/st FXCompiler.lsl"
-#include "ots/classes/st SpawnHub.lsl"
-#include "ots/classes/st Level.lsl"
-#include "ots/classes/st LevelCfg.lsl"
-#include "ots/classes/st MonsterScript.lsl"
+#include "ots/classes/ots Status.lsl"
+#include "ots/classes/ots COM.lsl"
+#include "ots/classes/ots Rape.lsl"
+#include "ots/classes/ots Monster.lsl"
+#include "ots/classes/ots Combat.lsl"
+#include "ots/classes/ots Gun.lsl"
+#include "ots/classes/ots NpcConf.lsl"
+#include "ots/classes/ots RapeHandler.lsl"
+#include "ots/classes/ots RapeTest.lsl"
+#include "ots/classes/ots FXCompiler.lsl"
+#include "ots/classes/ots SpawnHub.lsl"
+#include "ots/classes/ots Level.lsl"
+#include "ots/classes/ots LevelCfg.lsl"
+#include "ots/classes/ots MonsterScript.lsl"
 
 
 
-#include "xobj_core/classes/st Climb.lsl"
-#include "xobj_core/classes/st Primswim.lsl"
-#include "xobj_core/classes/st FX.lsl"
-#include "xobj_core/classes/st AnimHandler.lsl"
-#include "xobj_core/classes/cl Dialog.lsl"
-#include "xobj_core/classes/st Remoteloader.lsl"
-#include "xobj_core/classes/st Attached.lsl"
-#include "xobj_core/classes/st RLV.lsl"
-
-#include "xobj_toonie/classes/st Footsteps.lsl"
-#include "xobj_toonie/classes/cl MeshAnim.lsl"
-
+#include "xobj_core/classes/jas Climb.lsl"
+#include "xobj_core/classes/jas Primswim.lsl"
+#include "xobj_core/classes/jas FX.lsl"
+#include "xobj_core/classes/jas AnimHandler.lsl"
+#include "xobj_core/classes/jas Dialog.lsl"
+#include "xobj_core/classes/jas Remoteloader.lsl"
+#include "xobj_core/classes/jas Attached.lsl"
+#include "xobj_core/classes/jas RLV.lsl"
+#include "xobj_toonie/classes/ton Footsteps.lsl"
+#include "xobj_toonie/classes/ton MeshAnim.lsl"
 
 
 #define CRIT_TIME 2.5
@@ -52,6 +50,6 @@
 #define IMPACT_CHAN playerChan(llGetOwner())+3
 #define SHELL_CHAN playerChan(llGetOwner())+2
 
-#define PLAYER_SEX (integer)db2$get("st COM", ([COMShared$jasx, "sex"]))
+#define PLAYER_SEX (integer)db2$get("ots COM", ([COMShared$jasx, "sex"]))
 
 
