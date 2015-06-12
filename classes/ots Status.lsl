@@ -31,7 +31,7 @@
 
 #define getStatus() (integer)db2$get("ots Status", [StatusShared$FLAGS])
 
-
+//
 #define Status$setFlag(flags) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$setFlag, [flags], TNN)
 #define Status$remFlag(flags) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$remFlag, [flags], TNN)
 #define Status$addHP(val) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$addHP, [val], TNN)

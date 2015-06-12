@@ -1,3 +1,4 @@
+#define ALLOW_USER_DEBUG 1
 #define OVERRIDE_TOKEN			// Override 
 #define getToken(senderKey, recipient, saltrand) "s$"
 #include "xobj_core/_ROOT.lsl"
@@ -20,6 +21,7 @@
 #include "ots/classes/ots Level.lsl"
 #include "ots/classes/ots LevelCfg.lsl"
 #include "ots/classes/ots MonsterScript.lsl"
+#include "ots/classes/ots MissionHandler.lsl"
 
 
 
@@ -37,7 +39,7 @@
 
 #define CRIT_TIME 2.5
 
-#define MONSTERSCRIPT_CHAN playerChan(llGetOwner())+4
+
 
 #define Party$FRIENDLY_FIRE 1
 
@@ -46,10 +48,14 @@
 #define VAGINA 2
 #define TITS 4
 
-
+#define MONSTERSCRIPT_CHAN 0xFEE7
 #define IMPACT_CHAN playerChan(llGetOwner())+3
 #define SHELL_CHAN playerChan(llGetOwner())+2
 
 #define PLAYER_SEX (integer)db2$get("ots COM", ([COMShared$jasx, "sex"]))
+
+#define ots$hurt(target, dmg, flags, aggro_modifier) hotTask(target, hottask$hurt, ([dmg, flags, aggro_modifier]))
+#define ots$getArmor() (float)db2$get("ots Status", [StatusShared$ARMOR])
+#define ots$getHP() (float)db2$get("ots Status", [StatusShared$HP])
 
 

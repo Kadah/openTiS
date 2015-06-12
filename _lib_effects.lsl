@@ -1,15 +1,9 @@
 
-// Type can be anything and can be used to implement things like resist. Some common ones are below. You technically don't need to treat them as bitwise.
 // If perc is set it does percentage of max instead of a fixed value
 #define fx$ADD_HP 1			// [(float)amount, (bool)perc]
 #define fx$ADD_ARMOR 2		// [(float)amount, (bool)perc]
 #define fx$ADD_STAMINA 3	// [(float)amount, (bool)perc]
-	#define fxatype$GUN 1
-	#define fxatype$MELEE 2
-	#define fxatype$MAGIC 4
-	#define fxatype$FIRE 8
-	#define fxatype$FROST 16
-	#define fxatype$ELECTRICITY 32
+
 
 #define fx$STUN 4			// null - Serves as interrupt on immediate
 #define fx$SNARE 5			// [] - 1 = fully rooted - 
@@ -32,34 +26,48 @@
 
 // BUILT IN
 #define fx$REM_FX_BY_NAME 18
-#define fx$REM_FX_BY_TAG 19	// [(int)tag]
+#define fx$REM_FX_BY_TAG 19	// [(int)tag, (int)tag...]
 
 #define fx$ROOT 20			//
 #define fx$FORCE_UNSIT 21	// 
 #define fx$TRIGGER_SOUND 22	// [(key)sound, (float)vol]
 #define fx$ATTACH 23		// *[(string)item]
 
-// Anything 1000 and above are dev defined
+#define fx$MOD_ACCURACY 24	// (float)mod - Not yet implemented
 
 
+/*
 
+FX$send(llGetOwnerKey(attachment), llGetKey(), FX_buildWrapper(0,0,[0,FX_buildPackage(
+    0,0,0,0,"","","",[
+        FX_buildFX(fx$REM_FX_BY_NAME, ["CZap"])
+    ], [], [], [], 0
+    )]));
+
+*/
 
 
 // Built in conditions
 // Use a negative for inverse
 // The first 2 are built into the module, the rest need local implementation
 #define fx$COND_HAS_PACKAGE_NAME 1			// [(str)name1, (str)name2...] - Recipient has a package with at least one of these names
-#define fx$COND_HAS_PACKAGE_TAG 2			// [(int)tag1, (int)tag2...] - Recipient has a tackage with a tag with at least one of these
+#define fx$COND_HAS_PACKAGE_TAG 2			// [(int)tag1, (int)tag2...] - Recipient has a package with a tag with at least one of these
 
-#define fx$COND_HP_GREATER_THAN 3			// [(float)hpPerc || >1 = hp exact]
-#define fx$COND_ARMOR_GREATER_THAN 4		// [(float)armorPerc || >1 = armor exact]
 
-#define fx$COND_NOT_RAPED 5					// []
+#define fx$COND_HP_GREATER_THAN 100			// [(float)hpPerc || >1 = hp exact]
+#define fx$COND_ARMOR_GREATER_THAN 101		// [(float)armorPerc || >1 = armor exact]
+#define fx$COND_NOT_RAPED 102				// []
+#define fx$COND_NAKED 103					// NULL
 
 // Anything 1000 and above are user defined
 
 
 
 // TAGS
-// Anything above 1000 are user defined
 #define fx$TAG_RAPE 1
+#define fx$TAG_PENIS_ATTACHMENT 2
+#define fx$TAG_VAG_ATTACHMENT 3
+#define fx$TAG_BUTT_ATTACHMENT 4
+#define fx$TAG_BREAST_ATTACHMENT 5
+
+

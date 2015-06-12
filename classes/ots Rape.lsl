@@ -14,5 +14,5 @@
 #define monsterRapePos(ascale, rot) 
 
 
-#define monsterRapeGeo(targ, ascale, rotOffset, posOffset, rotName, posName) vector vr = llRot2Euler(llGetRot());rotation rotName = llEuler2Rot(<0,0,vr.y-PI_BY_TWO>); vector posName = llGetPos()+<0,0,ascale.z/2-.25>+posOffset*rotName; rotName*=rotOffset
+#define monsterRapeGeo(ascale, rotOffset, posOffset, rotName, posName) vector vr = llRot2Euler(llGetRot());rotation rotName = llEuler2Rot(<0,0,vr.y-PI_BY_TWO>); vector posName = llGetPos()+<0,0,ascale.z/2-.25>+posOffset*rotName; rotName*=rotOffset
 

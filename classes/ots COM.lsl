@@ -4,6 +4,8 @@
 #define COMMethod$leaveParty 4			// 
 #define COMMethod$joinParty 5			// (str)token
 #define COMMethod$toggleFriendlyFire 6	//
+#define COMMethod$getMissionData 7		// (str)token
+#define COMMethod$setMissionData 8		// (str)token, (var)data
 
 #define COM$getSceneById(id) runMethod((string)LINK_THIS, "ots COM", COMMethod$getSceneById, [id], TNN)
 #define COM$getRandomScene(monster, selfSpell) runMethod((string)LINK_THIS, "ots COM", COMMethod$getRandomScene, ([monster, selfSpell]), TNN)
@@ -11,6 +13,8 @@
 #define COM$leaveParty() runMethod((string)LINK_ROOT, "ots COM", COMMethod$leaveParty, [], TNN)
 #define COM$joinParty(token) runMethod((string)LINK_ROOT, "ots COM", COMMethod$joinParty, [token], TNN)
 #define COM$toggleFriendlyFire() runMethod((string)LINK_ROOT, "ots COM", COMMethod$toggleFriendlyFire, [], TNN)
+#define COM$getMissionData(token) runMethod((string)LINK_ROOT, "ots COM", COMMethod$getMissionData, [token], TNN)
+#define COM$setMissionData(token, data) runMethod((string)LINK_ROOT, "ots COM", COMMethod$setMissionData, [token, data], TNN)
 
 
 #define COMShared$settings "a"

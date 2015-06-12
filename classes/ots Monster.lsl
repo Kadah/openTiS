@@ -20,7 +20,7 @@
 
 #define MonsterEvt$inRange 1 			// (key)target
 #define MonsterEvt$lostRange 2			// (key)target
-#define MonsterEvt$attack 3				// (key)target
+#define MonsterEvt$attack 3				// (key)target, (arr)ctData(see ots Status fn. Status$get
 #define MonsterEvt$rapeStart 4			// (key)target
 #define MonsterEvt$rapeEnd 5			// (key)target
 #define MonsterEvt$players 6			// (arr)players
