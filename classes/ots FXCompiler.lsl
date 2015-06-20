@@ -7,6 +7,7 @@
 #define FXCFlag$STUNNED 0x2
 #define FXCFlag$INVUL 0x4
 #define FXCFlag$ROOTED 0x8
-
+#define FXCFlag$NOBLOCK 0x10	
+#define FXCFlag$RAPED 0x20	
 
 

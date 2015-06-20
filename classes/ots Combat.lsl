@@ -13,7 +13,7 @@
 #define Combat$updateGun(complete) runMethod((string)LINK_SET, "ots Combat", CombatMethod$updateGun, [complete], TNN)
 #define Combat$clipOut() runMethod((string)LINK_SET, "ots Combat", CombatMethod$clipOut, [], TNN)
 #define Combat$clipIn(ammo) runMethod((string)LINK_SET, "ots Combat", CombatMethod$clipIn, [ammo], TNN)
-
+#define Combat$addAmmo(targ, perc) runMethod(targ, "ots Combat", CombatMethod$addAmmo, [perc], TNN)
 
 #define Combat$iniGun() runMethod((string)llGetOwner(), "ots Combat", CombatMethod$iniGun, [], "")
 

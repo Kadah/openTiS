@@ -7,7 +7,7 @@
 #define StatusMethod$get 6				// callbacks [(int)flags, (float)hp, (float)armor, (int)sex]
 #define StatusMethod$setArmor 7			// (float)percentage
 #define StatusMethod$dropAggro 8		// NPC only - [(key)player]
-#define StatusMethod$noise 9			// NPC - [(float)aggro_range_multiplier, (key)agent] - Cause noise that might make monsters aggro - agent defaults to the sender owner
+#define StatusMethod$noise 9			// NPC - [(float)dist, (key)agent] - Cause noise that might make monsters aggro - agent defaults to the sender owner
 #define StatusMethod$runtimeReady 10	// 
 
 #define Status$FLAG_SWIMMING 0x1
@@ -41,4 +41,6 @@
 #define Status$setArmor(perc) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$setArmor, [perc], TNN)
 #define Status$dropAggro(player) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$dropAggro, [player], TNN)
 #define Status$runtimeReady() runMethod((string)LINK_ROOT, "ots Status", StatusMethod$runtimeReady, [], TNN)
+#define Status$addArmorTo(id, amount) runMethod(id, "ots Status", StatusMethod$addArmor, [amount], TNN)
+#define Status$addHpTo(id, amount) runMethod(id, "ots Status", StatusMethod$addHP, [amount], TNN)
 

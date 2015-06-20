@@ -28,12 +28,15 @@
 #define fx$REM_FX_BY_NAME 18
 #define fx$REM_FX_BY_TAG 19	// [(int)tag, (int)tag...]
 
-#define fx$ROOT 20			//
+#define fx$ROOT 20			// 
 #define fx$FORCE_UNSIT 21	// 
 #define fx$TRIGGER_SOUND 22	// [(key)sound, (float)vol]
 #define fx$ATTACH 23		// *[(string)item]
 
 #define fx$MOD_ACCURACY 24	// (float)mod - Not yet implemented
+#define fx$PREVENT_BLOCK 25	// - Prevents blocking
+#define fx$RUN_METHOD 26	// (key)id, (string)script, (int)method, (arr)data, (str)callback
+#define fx$RAPE 27			// toggles the rape flag
 
 
 /*
