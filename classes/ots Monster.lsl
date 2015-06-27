@@ -28,6 +28,7 @@
 #define MonsterEvt$players 6			// (arr)players
 #define MonsterEvt$runtimeFlagsChanged 7// (int)flags
 
+
 #define Monster$RF_IMMOBILE 1
 #define Monster$RF_PACIFIED 2
 

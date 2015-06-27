@@ -1,7 +1,7 @@
 
 
 #define FXCEvent$interrupt 1
-#define FXCEvent$update 2		// [(int)flags, (float)dmg_taken_mod, (float)dmg_done_mod]
+#define FXCEvent$update 2		// [(int)flags, (float)dmg_taken_mod, (float)dmg_done_mod, (float)hp_regen_mod]
 
 #define FXCFlag$SNARED 0x1
 #define FXCFlag$STUNNED 0x2
@@ -9,5 +9,6 @@
 #define FXCFlag$ROOTED 0x8
 #define FXCFlag$NOBLOCK 0x10	
 #define FXCFlag$RAPED 0x20	
+#define FXCFlag$CRITBLOCK 0x40	// Critical hits blocked
 
 

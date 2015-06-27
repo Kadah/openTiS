@@ -5,6 +5,8 @@
 #define SpawnHubMethod$getScript 3		// [(str)script, (int)pin, (int)startparam]
 
 
+#define SpawnHub$spawn(obj, pos, rot, assets) runOmniMethod("ots SpawnHub", SpawnHubMethod$spawn, [obj, pos, rot, mkarr(assets)], TNN)
+
 
 
 

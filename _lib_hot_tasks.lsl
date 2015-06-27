@@ -19,6 +19,7 @@
 
 #define hottask$monsterCom 4		// Sent from a monster rezzed item to a monster, see the dbot for info
 
+// "OT$[10]"
 #define hotTask(target, task, args) llRegionSayTo(target, -10, "OT$"+llList2Json(JSON_ARRAY, [task]+args))
 #define hotTaskInternal(script) llMessageLinked(LINK_SET, 0, mkarr(dta), script)
 #define hotTaskInternalReal(link, task, script, data) llMessageLinked(link, 0, mkarr((["", task])+data), script)

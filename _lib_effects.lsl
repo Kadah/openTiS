@@ -1,8 +1,8 @@
 
 // If perc is set it does percentage of max instead of a fixed value
-#define fx$ADD_HP 1			// [(float)amount, (bool)perc]
-#define fx$ADD_ARMOR 2		// [(float)amount, (bool)perc]
-#define fx$ADD_STAMINA 3	// [(float)amount, (bool)perc]
+#define fx$ADD_HP 1			// [(float)amount]
+#define fx$ADD_ARMOR 2		// [(float)amount]
+#define fx$ADD_STAMINA 3	// [(float)perc]
 
 
 #define fx$STUN 4			// null - Serves as interrupt on immediate
@@ -37,6 +37,13 @@
 #define fx$PREVENT_BLOCK 25	// - Prevents blocking
 #define fx$RUN_METHOD 26	// (key)id, (string)script, (int)method, (arr)data, (str)callback
 #define fx$RAPE 27			// toggles the rape flag
+
+#define fx$MOD_HP_REGEN 28	// (float)modifier - 1 = normal, 2 = double, 0.5 = half
+#define fx$CRIT_INVUL 29	// null - Invulnerable to crits
+
+#define fx$ADD_ARMOR_PERC 30// (float)perc
+#define fx$ADD_HP_PERC 31   // (float)perc
+
 
 
 /*

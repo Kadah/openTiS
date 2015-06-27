@@ -22,6 +22,7 @@
 #include "ots/classes/ots LevelCfg.lsl"
 #include "ots/classes/ots MonsterScript.lsl"
 #include "ots/classes/ots MissionHandler.lsl"
+#include "ots/classes/ots Interactive.lsl"
 
 
 

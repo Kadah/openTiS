@@ -2,13 +2,15 @@
 #define StatusMethod$setFlag 1
 #define StatusMethod$remFlag 2
 #define StatusMethod$addHP 3
-#define StatusMethod$addArmor 4
+#define StatusMethod$addArmor 4			// (int)amount
 #define StatusMethod$hurt 5				// 
 #define StatusMethod$get 6				// callbacks [(int)flags, (float)hp, (float)armor, (int)sex]
 #define StatusMethod$setArmor 7			// (float)percentage
 #define StatusMethod$dropAggro 8		// NPC only - [(key)player]
 #define StatusMethod$noise 9			// NPC - [(float)dist, (key)agent] - Cause noise that might make monsters aggro - agent defaults to the sender owner
 #define StatusMethod$runtimeReady 10	// 
+#define StatusMethod$addArmorPerc 11	
+#define StatusMethod$addHPPerc 12
 
 #define Status$FLAG_SWIMMING 0x1
 #define Status$FLAG_CLIMBING 0x2
@@ -43,4 +45,5 @@
 #define Status$runtimeReady() runMethod((string)LINK_ROOT, "ots Status", StatusMethod$runtimeReady, [], TNN)
 #define Status$addArmorTo(id, amount) runMethod(id, "ots Status", StatusMethod$addArmor, [amount], TNN)
 #define Status$addHpTo(id, amount) runMethod(id, "ots Status", StatusMethod$addHP, [amount], TNN)
-
+#define Status$addHPPerc(val) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$addHPPerc, [val], TNN)
+#define Status$addArmorPerc(val) runMethod((string)LINK_ROOT, "ots Status", StatusMethod$addArmorPerc, [val], TNN)

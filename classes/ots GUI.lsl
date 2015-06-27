@@ -13,6 +13,7 @@
 
 
 #define GUIConf$colorGood <.5,.75,.5>
+#define GUIConf$colorNeutral <.6,.6,.6>
 #define GUIConf$colorBad <.75,.5,.5>
 #define GUIConf$colorGame <.75,.5,.75>
 
